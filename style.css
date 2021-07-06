@@ -1,18 +1,29 @@
 *{
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 35px;
+}
+p{
+    font-size: 18px;
 }
 .container{
     width: 90%;
     margin: 0 auto;
+    overflow: hidden;
 }
 .header-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding-bottom: 50px;
+    margin-bottom: 80px;
 }
 .skip-color{
-    color: rgb(255, 102, 0);
+    color: rgb(253, 134, 54);
 }
 /* common button */
 .btn-style{
@@ -21,46 +32,167 @@
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    transition: .5s;
 }
 .btn-style:hover{
     background-image: linear-gradient( rgb(252, 168, 113), rgb(253, 51, 0));
 }
 /* common img width */
 .img-width{
-    width: 80%;
+    width: 100%;
 }
 .about-section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center; 
-    padding-bottom: 50px;
+    background-image: url('images/shapes/Frame 57.jpg');
+    background-size: cover;
+    margin-bottom: 80px;
 }
-.bg-img{
-    background-image: url(images/shapes/Frame\ 57.jpg);
-    background: cover;
+.about-img-width{
+    text-align: center;
+}
+.about-img-width img{
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(6px);
 }
 .about-me{
     padding-left: 8%;
 }
 /* recipie section */
 .recipie-section{
-    padding-bottom: 50px;
+    margin: 0 7px 80px 7px;
 }
 .recipie-header{
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 .recipie-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
     grid-gap: 5%;
 }
 .box-shadow{
-    box-shadow:5px 5px 10px 1px grey;
+    box-shadow: 5px 4px 16px 2px rgb(177, 173, 173);
     padding: 6%;
-    border-radius: 5%;
+    border-radius: 6%;
+}
+.recipie-title{
+    text-align: center;
+}
+/* bottom section */
+.subscriber-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 5px 4px 16px 2px rgb(177, 173, 173);
+    padding: 5%;
+    margin: 0 7px 80px 7px;
+    border-radius: 20px;
+}
+.text-center{
+    text-align: center;
+}
+/* contact section */
+.contact-align{
+    text-align: center;
+    /* margin-bottom:; */
+}
+.contact-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 10px;
+}
+.contact-logo{
+    width: 98%;
+}
+.form{
+    width: 90%;
+}
+.form-input{
+    width: 100%;
+    margin: 2% 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.button{
+    text-align: right;
+}
+.button input{
+    background-image: linear-gradient(to right, rgb(253, 51, 0), rgb(252, 168, 113));
+    color: azure;
+    width: 30%;
+    border-radius: 10px;
+    padding: 1%;
+    border: none;
+}
+.button input:hover{
+    background-image: linear-gradient( rgb(252, 168, 113), rgb(253, 51, 0));
+}
+footer{
+    background-color: rgb(44, 43, 43);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+footer h2{
+    color: rgb(116, 114, 116);
+}
+footer p{
+    color: rgb(207, 207, 207);
+}
+/* end style */
+@media (max-width: 768px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .recipie-items{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 100px;
+    }
+    .contact-section{
+        display: block;
+    }
+    .contact-section .form{
+        width: 100%;
+    }
+    .header-container{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10%;
+    }
+    .about-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 575px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .recipie-items{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 200px;
+    }
+    .header-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-section{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10%;
+    }
 }
